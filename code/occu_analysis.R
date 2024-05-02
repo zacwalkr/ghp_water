@@ -111,11 +111,11 @@ mm.d <- ggplot(d3$Wetness, aes(x = x, y = predicted)) +
   geom_text(data = blab[4,], aes(x = x, y = y, label = lab), size = 7)
 
 #combine into figure
-fig3 <- ggarrange(mm.a, mm.b, mm.c, mm.d)
-fig3
+fig2 <- ggarrange(mm.a, mm.b, mm.c, mm.d)
+fig2
 
 #save figure
-ggsave("fig_3.png", plot = fig3, width = 3000, height = 2200, units = "px", bg = "white")
+ggsave("fig_2.png", plot = fig3, width = 3000, height = 2200, units = "px", bg = "white")
 
 
 #### checking model fit - overall fine
