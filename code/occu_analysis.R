@@ -70,7 +70,7 @@ mm.a <- ggplot(c3$Wetness, aes(x = x, y = predicted)) +
   xlim(16,100)+
   ylim(0,1)+
   xlab(" ")+
-  ylab("Occupancy index")+
+  ylab("Predicted index")+
   ggtitle(bquote(italic("P. introloba")))+
   geom_text(data = blab[1,], aes(x = x, y = y, label = lab), size = 12)
 
@@ -94,7 +94,7 @@ mm.c <- ggplot(m3$Wetness, aes(x = x, y = predicted)) +
   xlim(16,100)+
   ylim(0,1)+
   xlab("Wetness score (%)")+
-  ylab("Occupancy index")+
+  ylab("Predicted occupancy")+
   ggtitle(bquote(italic("M. pedunculatum")))+
   geom_text(data = blab[3,], aes(x = x, y = y, label = lab), size = 7)
 
