@@ -70,7 +70,7 @@ mm.a <- ggplot(c3$Wetness, aes(x = x, y = predicted)) +
   xlim(16,100)+
   ylim(0,1)+
   xlab(" ")+
-  ylab("Occupancy")+
+  ylab("Occupancy index")+
   ggtitle(bquote(italic("P. introloba")))+
   geom_text(data = blab[1,], aes(x = x, y = y, label = lab), size = 12)
 
@@ -93,8 +93,8 @@ mm.c <- ggplot(m3$Wetness, aes(x = x, y = predicted)) +
   geom_jitter(data = mmdf2, aes(x = Wetness, y = Present), colour = "blue", alpha = 0.15, width = 10, height = 0.02)+
   xlim(16,100)+
   ylim(0,1)+
-  xlab("Wetness score")+
-  ylab("Occupancy")+
+  xlab("Wetness score (%)")+
+  ylab("Occupancy index")+
   ggtitle(bquote(italic("M. pedunculatum")))+
   geom_text(data = blab[3,], aes(x = x, y = y, label = lab), size = 7)
 
@@ -105,7 +105,7 @@ mm.d <- ggplot(d3$Wetness, aes(x = x, y = predicted)) +
   geom_jitter(data = mmdf3, aes(x = Wetness, y = Present), colour = "blue", alpha = 0.15, width = 10, height = 0.02)+
   xlim(16,100)+
   ylim(0,1)+
-  xlab("Wetness score")+
+  xlab("Wetness score (%)")+
   ylab(" ")+
   ggtitle(bquote(italic("D. arcturi")))+
   geom_text(data = blab[4,], aes(x = x, y = y, label = lab), size = 7)
@@ -115,7 +115,7 @@ fig2 <- ggarrange(mm.a, mm.b, mm.c, mm.d)
 fig2
 
 #save figure
-ggsave("fig_2.png", plot = fig3, width = 3000, height = 2200, units = "px", bg = "white")
+ggsave("fig_2.png", plot = fig2, width = 3000, height = 2200, units = "px", bg = "white")
 
 
 #### checking model fit - overall fine
